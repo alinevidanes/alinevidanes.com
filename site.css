@@ -304,3 +304,5 @@ footer{background:var(--navy-3);color:#C9D2DD;font-size:14px}
 .area .more{margin-top:auto;font-size:14px;font-weight:600;color:var(--sage);text-decoration:none}
 @media (max-width:760px){.related-grid{grid-template-columns:1fr}.author{flex-direction:column}}
 .menu a{white-space:nowrap}
+.author picture{flex:none;width:84px;height:84px;display:block}.author img{width:84px;height:84px;object-position:50% 15%}
+.author picture{overflow:hidden;border-radius:50%}.author img{transform:scale(1.6);transform-origin:50% 12%}
