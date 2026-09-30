@@ -322,3 +322,10 @@ footer{background:var(--navy-3);color:#C9D2DD;font-size:14px}
 .intl-form .row2>div{display:flex;flex-direction:column;gap:6px}
 .nav-lang{font-size:13px;letter-spacing:.08em}
 @media (max-width:560px){.intl-form .row2{grid-template-columns:1fr}.menu.open-always .btn{display:none}}
+/* status dos formulários */
+.form-status{margin:10px 0 0;font-size:14px;line-height:1.5;min-height:1.5em}
+.form-status a{color:inherit;text-decoration:underline}
+.form-light .form-status.ok{color:var(--sage)}
+.form-light .form-status.err{color:#9B2C2C}
+.intl-form .form-status{color:#fff}
+.intl-form .form-status.err{color:#F5C6B8}
