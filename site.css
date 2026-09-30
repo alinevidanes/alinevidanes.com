@@ -306,3 +306,19 @@ footer{background:var(--navy-3);color:#C9D2DD;font-size:14px}
 .menu a{white-space:nowrap}
 .author picture{flex:none;width:84px;height:84px;display:block}.author img{width:84px;height:84px;object-position:50% 15%}
 .author picture{overflow:hidden;border-radius:50%}.author img{transform:scale(1.6);transform-origin:50% 12%}
+/* ---- páginas em outros idiomas ---- */
+.menu.open-always{display:flex!important;position:static;flex-direction:row;align-items:center;gap:18px;padding:0;border:0;background:none}
+.menu.open-always a:not(.btn){border:0;padding:0}
+.menu.open-always .btn{margin:0}
+.langsw{font-size:14px;letter-spacing:.08em;color:var(--muted)}
+.langsw a{text-decoration:none;color:var(--ink)}
+.langsw a[aria-current]{color:var(--sage);font-weight:600}
+.sent-ok{background:#E6F0EA;border:1px solid var(--sage);padding:14px 18px;margin-bottom:24px;color:var(--ink)}
+.intl-form{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+.intl-form label{color:#D5DCE5}
+.intl-form input,.intl-form textarea{background:transparent;border:1px solid #4A5D7A;color:#fff}
+.intl-form textarea{height:auto;min-height:120px;padding:12px 16px}
+.intl-form .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.intl-form .row2>div{display:flex;flex-direction:column;gap:6px}
+.nav-lang{font-size:13px;letter-spacing:.08em}
+@media (max-width:560px){.intl-form .row2{grid-template-columns:1fr}.menu.open-always .btn{display:none}}
