@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Consentimento (Consent Mode v2): análise desativada até a pessoa aceitar -->
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-56L2RRPF');</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Recognizing a Foreign Divorce in Brazil | Aline Vidanes</title>
 <meta name="description" content="Divorced abroad from a Brazilian? When a foreign divorce needs Brazil's Superior Court (STJ), when a registry office is enough, and which documents you need.">
@@ -134,12 +143,15 @@
 </script>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56L2RRPF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header>
   <div class="wrap nav">
     <a class="brand" href="/" aria-label="Aline Vidanes"><b>Aline Vidanes</b><small>Lawyer</small></a>
     <nav class="menu open-always" aria-label="Language">
       <span class="langsw"><a href="/homologacao-de-sentenca-estrangeira/" hreflang="pt">PT</a> · <a href="/en/foreign-divorce-recognition-brazil/" aria-current="page" hreflang="en">EN</a> · <a href="/es/reconocimiento-divorcio-extranjero-brasil/" hreflang="es">ES</a></span>
-      <a class="btn btn-dark" href="#contact">Contact</a>
+      <a class="btn btn-dark" href="#contact" data-track="cta-contato">Contact</a>
     </nav>
   </div>
 </header>
@@ -213,7 +225,7 @@
 <div class="cta" id="contact">
   <h3>Tell me about your case</h3>
   <p>Write in English, Spanish or Portuguese. I reply by email.</p>
-  <form class="intl-form" method="POST" action="https://api.web3forms.com/submit" data-w3f>
+  <form class="intl-form" method="POST" action="https://api.web3forms.com/submit" data-w3f data-track="formulario-contato">
       <input type="hidden" name="access_key" value="25faf4db-9119-431e-aba3-1f1d947e77f1">
       <input type="hidden" name="subject" value="New contact (EN) | alinevidanes.com">
       <input type="hidden" name="from_name" value="alinevidanes.com">
@@ -224,7 +236,7 @@
     <label for="f-m">How can I help?</label><textarea id="f-m" name="message" required></textarea>
     <label class="consent"><input type="checkbox" name="consent" required><span>I have read the Privacy Policy (in Portuguese) and agree to the use of this data to reply to my message. <a href="/politica-de-privacidade.html" style="color:#fff">Privacy Policy</a></span></label>
     <div class="btns"><button class="btn btn-light" type="submit">Send</button>
-      <p class="form-status" role="status" aria-live="polite"></p><a class="btn btn-line" href="#" data-wa>Chat on WhatsApp</a></div>
+      <p class="form-status" role="status" aria-live="polite"></p><a class="btn btn-line" href="#" data-wa data-track="whatsapp">Chat on WhatsApp</a></div>
   </form>
 </div>
 <div class="author">
@@ -237,7 +249,7 @@
 <span>© <span id="ano">2026</span> Aline Vidanes · OAB/SP 396.351 · Ordem dos Advogados (Portugal) 61988P</span>
 <span>Also available in: <a href="/homologacao-de-sentenca-estrangeira/" hreflang="pt">PT</a> · <a href="/en/foreign-divorce-recognition-brazil/" aria-current="page" hreflang="en">EN</a> · <a href="/es/reconocimiento-divorcio-extranjero-brasil/" hreflang="es">ES</a></span>
 </div></footer>
-<a class="wa" href="#" data-wa aria-label="WhatsApp" target="_blank" rel="noopener">
+<a class="wa" href="#" data-wa aria-label="WhatsApp" target="_blank" rel="noopener" data-track="whatsapp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.26 8.26 0 0 1-1.26-4.380c0-4.54 3.7-8.24 8.25-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.55-3.7 8.24-8.24 8.24zm4.52-6.170c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.17.24-.64.8-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.070 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
   <span>Chat with me</span>
 </a>
@@ -246,4 +258,5 @@
 <script>
 document.querySelectorAll('[data-wa]').forEach(function(a){a.href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hello Aline, I found your website and would like to schedule a consultation.");});
 </script>
+<script src="/tracking.js"></script>
 </body></html>
