@@ -6,20 +6,24 @@
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
-try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
+try{var c=localStorage.getItem('cookie-consent');if(c){var o=c==='granted'?{analytics:1,clarity:1}:c==='denied'?{}:JSON.parse(c),g=function(b){return b?'granted':'denied';};gtag('consent','update',{analytics_storage:g(o.analytics),ad_storage:g(o.marketing),ad_user_data:g(o.marketing),ad_personalization:g(o.marketing)});dataLayer.push({consent_analytics:g(o.analytics),consent_clarity:g(o.clarity),consent_marketing:g(o.marketing)});}}catch(e){}
 </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-56L2RRPF');</script>
 <!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inventário com bens no exterior e herdeiros fora do Brasil</title>
-<meta name="description" content="Mora na Europa e tem bens no Brasil, ou o contrário? Saiba onde fazer o inventário, qual lei se aplica e como participar sem viajar.">
-<link rel="canonical" href="https://alinevidanes.com/inventario-com-bens-no-exterior/">
+<title>Homologação de sentença estrangeira no STJ: guia</title>
+<meta name="description" content="Como validar no Brasil um divórcio, guarda ou partilha decididos no exterior: quando vai ao STJ, quando basta o cartório, documentos, apostila e tradução.">
+<link rel="canonical" href="https://alinevidanes.com/homologacao-de-sentenca-estrangeira/">
+<link rel="alternate" hreflang="pt" href="https://alinevidanes.com/homologacao-de-sentenca-estrangeira/">
+<link rel="alternate" hreflang="en" href="https://alinevidanes.com/en/foreign-divorce-recognition-brazil/">
+<link rel="alternate" hreflang="es" href="https://alinevidanes.com/es/reconocimiento-divorcio-extranjero-brasil/">
+<link rel="alternate" hreflang="x-default" href="https://alinevidanes.com/homologacao-de-sentenca-estrangeira/">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Inventário com bens no exterior: quando a família e o patrimônio estão em mais de um país">
-<meta property="og:description" content="Mora na Europa e tem bens no Brasil, ou o contrário? Saiba onde fazer o inventário, qual lei se aplica e como participar sem viajar.">
-<meta property="og:url" content="https://alinevidanes.com/inventario-com-bens-no-exterior/">
+<meta property="og:title" content="Homologação de sentença estrangeira: como validar no Brasil um divórcio feito no exterior">
+<meta property="og:description" content="Como validar no Brasil um divórcio, guarda ou partilha decididos no exterior: quando vai ao STJ, quando basta o cartório, documentos, apostila e tradução.">
+<meta property="og:url" content="https://alinevidanes.com/homologacao-de-sentenca-estrangeira/">
 <meta property="og:image" content="https://alinevidanes.com/og.jpg">
 <meta name="theme-color" content="#14233A">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -31,17 +35,17 @@ try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','updat
  "@graph": [
   {
    "@type": "WebPage",
-   "@id": "https://alinevidanes.com/inventario-com-bens-no-exterior/#webpage",
-   "url": "https://alinevidanes.com/inventario-com-bens-no-exterior/",
-   "name": "Inventário com bens no exterior e herdeiros fora do Brasil",
-   "description": "Mora na Europa e tem bens no Brasil, ou o contrário? Saiba onde fazer o inventário, qual lei se aplica e como participar sem viajar.",
+   "@id": "https://alinevidanes.com/homologacao-de-sentenca-estrangeira/#webpage",
+   "url": "https://alinevidanes.com/homologacao-de-sentenca-estrangeira/",
+   "name": "Homologação de sentença estrangeira no STJ: guia",
+   "description": "Como validar no Brasil um divórcio, guarda ou partilha decididos no exterior: quando vai ao STJ, quando basta o cartório, documentos, apostila e tradução.",
    "inLanguage": "pt-BR",
    "dateModified": "2026-09-30",
    "isPartOf": {
     "@id": "https://alinevidanes.com/#website"
    },
    "about": {
-    "@id": "https://alinevidanes.com/inventario-com-bens-no-exterior/#servico"
+    "@id": "https://alinevidanes.com/homologacao-de-sentenca-estrangeira/#servico"
    },
    "author": {
     "@id": "https://alinevidanes.com/#aline"
@@ -49,16 +53,16 @@ try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','updat
   },
   {
    "@type": "Service",
-   "@id": "https://alinevidanes.com/inventario-com-bens-no-exterior/#servico",
-   "name": "Inventário e partilha com bens ou herdeiros no exterior",
-   "serviceType": "Inventário e partilha com bens ou herdeiros no exterior",
+   "@id": "https://alinevidanes.com/homologacao-de-sentenca-estrangeira/#servico",
+   "name": "Homologação de sentença estrangeira e averbação de divórcio estrangeiro",
+   "serviceType": "Homologação de sentença estrangeira e averbação de divórcio estrangeiro",
    "provider": {
-    "@id": "https://alinevidanes.com/#aline"
+    "@id": "https://alinevidanes.com/#escritorio"
    },
    "areaServed": "Worldwide",
    "availableChannel": {
     "@type": "ServiceChannel",
-    "serviceUrl": "https://alinevidanes.com/inventario-com-bens-no-exterior/",
+    "serviceUrl": "https://alinevidanes.com/homologacao-de-sentenca-estrangeira/",
     "availableLanguage": [
      "pt",
      "es",
@@ -78,70 +82,8 @@ try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','updat
     {
      "@type": "ListItem",
      "position": 2,
-     "name": "Inventário com bens no exterior",
-     "item": "https://alinevidanes.com/inventario-com-bens-no-exterior/"
-    }
-   ]
-  },
-  {
-   "@type": "FAQPage",
-   "@id": "https://alinevidanes.com/inventario-com-bens-no-exterior/#faq",
-   "mainEntity": [
-    {
-     "@type": "Question",
-     "name": "Preciso ir ao Brasil para fazer o inventário?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Em regra, não. O herdeiro que mora fora pode participar por procuração pública, feita no consulado ou em notário estrangeiro, ou por videoconferência, pela plataforma e-Notariado, no inventário em cartório."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "O inventário no Brasil inclui a conta ou o imóvel que estão no exterior?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Em regra, não. O inventário brasileiro trata dos bens situados no Brasil. Bens no exterior seguem o procedimento do país onde estão, o que costuma exigir um procedimento em cada país."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Moro na Europa. Qual lei vale para os meus bens no Brasil?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "O inventário dos bens no Brasil será feito no Brasil, mas a lei aplicável à sucessão, pela regra brasileira, é a do domicílio do falecido, que pode ser a lei do país europeu onde você mora. Há regras de proteção para cônjuge e filhos brasileiros."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Existe prazo para abrir o inventário?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No Brasil, o inventário deve ser aberto em até dois meses após o falecimento (CPC, art. 611). O atraso pode gerar multa sobre o ITCMD, conforme a lei de cada estado."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Dá para fazer inventário em cartório se houver herdeiro menor?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Desde a Resolução CNJ 571/2024, sim, desde que o menor receba sua parte ideal em cada bem e haja manifestação favorável do Ministério Público. Os demais requisitos da via extrajudicial também precisam ser cumpridos."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Um testamento feito no exterior vale no Brasil?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Pode valer, desde que tenha observado as formalidades do país onde foi feito. Para produzir efeitos no Brasil, ele passa por uma ação de abertura e cumprimento de testamento."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Quem paga o imposto sobre a herança quando o falecido morava fora?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "As regras do ITCMD para esses casos foram alteradas pela Reforma Tributária e pela Lei Complementar 227/2026, que em regra atribuem a cobrança ao estado de domicílio do herdeiro. Como a aplicação ainda varia entre os estados, é preciso analisar o caso."
-     }
+     "name": "Homologação de sentença estrangeira",
+     "item": "https://alinevidanes.com/homologacao-de-sentenca-estrangeira/"
     }
    ]
   },
@@ -151,7 +93,102 @@ try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','updat
    "name": "Aline Vidanes",
    "jobTitle": "Advogada",
    "url": "https://alinevidanes.com/",
-   "image": "https://alinevidanes.com/aline-retrato.jpg"
+   "image": "https://alinevidanes.com/aline-retrato.jpg",
+   "sameAs": [
+    "https://www.instagram.com/aline.vidanes/",
+    "https://www.linkedin.com/in/alinevidanes/"
+   ]
+  },
+  {
+   "@type": "LegalService",
+   "@id": "https://alinevidanes.com/#escritorio",
+   "name": "Aline Vidanes Advocacia",
+   "url": "https://alinevidanes.com/",
+   "founder": {
+    "@id": "https://alinevidanes.com/#aline"
+   },
+   "description": "Advocacia em direito de família e sucessões para famílias que vivem ou têm bens em mais de um país. Atendimento online.",
+   "availableLanguage": [
+    "pt",
+    "es",
+    "en"
+   ],
+   "sameAs": [
+    "https://www.instagram.com/aline.vidanes/",
+    "https://www.linkedin.com/in/alinevidanes/"
+   ],
+   "availableChannel": {
+    "@type": "ServiceChannel",
+    "name": "Atendimento online",
+    "serviceUrl": "https://alinevidanes.com/#contato",
+    "availableLanguage": [
+     "pt",
+     "es",
+     "en"
+    ]
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://alinevidanes.com/homologacao-de-sentenca-estrangeira/#faq",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Meu divórcio no exterior foi consensual. Preciso ir ao STJ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Se o divórcio foi consensual e apenas dissolveu o casamento (podendo tratar do nome), em regra não: ele pode ser averbado diretamente no cartório brasileiro (CPC, art. 961, § 5º). Se também tratou de filhos, pensão ou bens, é preciso homologar no STJ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Preciso estar no Brasil para homologar meu divórcio?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Não. O pedido no STJ é eletrônico e feito por advogado, com procuração que pode ser assinada no exterior. A averbação no cartório também pode ser feita por representante."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Não sei onde está meu ex-cônjuge. É possível homologar mesmo assim?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sim, é possível. Quando a outra parte não é localizada, a lei prevê formas de citação para esses casos, como a citação por edital. O processo tende a ser mais longo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que acontece se eu não homologar meu divórcio estrangeiro?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Para o Brasil, você continua casado. Isso pode impedir um novo casamento, complicar a venda de imóveis e a partilha de bens e gerar problemas em uma futura sucessão."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "A tradução precisa ser juramentada?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Em regra, sim: o STJ exige tradução oficial, feita por tradutor público juramentado no Brasil, salvo dispensa em tratado. Documentos em português, como os emitidos em Portugal, não precisam de tradução."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "O que é apostila da Haia?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "É um certificado que confirma a autenticidade de um documento público para uso em outro país que faça parte da Convenção da Apostila, da qual o Brasil participa desde 2016. É emitida no país de origem do documento."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Um divórcio feito em cartório ou órgão administrativo no exterior pode ser reconhecido?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Em muitos casos, sim. O CPC admite a homologação de decisão não judicial que, pela lei brasileira, teria natureza jurisdicional. E o divórcio consensual simples pode ser averbado diretamente. A análise depende do documento emitido no país."
+     }
+    }
+   ]
   }
  ]
 }
@@ -169,79 +206,93 @@ try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','updat
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
     </button>
     <nav class="menu" id="menu" aria-label="Principal">
-      <a href="/divorcio-no-exterior/">Divórcio</a><a href="/homologacao-de-sentenca-estrangeira/">Homologação</a><a href="/inventario-com-bens-no-exterior/" aria-current="page">Inventário</a><a href="/brasil-portugal/">Brasil e Portugal</a><a href="/artigos.html">Artigos</a>
+      <a href="/divorcio-no-exterior/">Divórcio</a><a href="/homologacao-de-sentenca-estrangeira/" aria-current="page">Homologação</a><a href="/inventario-com-bens-no-exterior/">Inventário</a><a href="/brasil-portugal/">Brasil e Portugal</a><a href="/artigos.html">Artigos</a>
       <a class="btn btn-dark" href="/#contato" data-track="cta-contato">Agendar atendimento</a>
     </nav>
   </div>
 </header>
 <main id="conteudo" class="article">
-<nav class="crumbs" aria-label="Você está em"><a href="/">Início</a> › Inventário com bens no exterior</nav>
-<p class="eyebrow" style="margin-top:28px">Sucessões internacionais</p>
-<h1>Inventário com bens no exterior: quando a família e o patrimônio estão em mais de um país</h1>
+<nav class="crumbs" aria-label="Você está em"><a href="/">Início</a> › Homologação de sentença estrangeira</nav>
+<p class="eyebrow" style="margin-top:28px">Reconhecimento de decisões estrangeiras</p>
+<h1>Homologação de sentença estrangeira: como validar no Brasil um divórcio feito no exterior</h1>
 <p class="byline">Por Aline Vidanes · Advogada (OAB/SP 396.351 · Ordem dos Advogados de Portugal 61988P) · Atualizado em setembro de 2026</p>
+<p class="byline" style="border:0;margin:-20px 0 24px;padding:0">Also in <a href="/en/foreign-divorce-recognition-brazil/" hreflang="en">English</a> · También en <a href="/es/reconocimiento-divorcio-extranjero-brasil/" hreflang="es">español</a></p>
+<p class="lead">Divorciou-se em outro país e precisa que ele tenha validade no Brasil? Uma decisão estrangeira não muda sozinha o seu estado civil aqui: ela precisa ser reconhecida. Há dois caminhos, a <strong>averbação direta no cartório</strong> e a <strong>homologação no Superior Tribunal de Justiça (STJ)</strong>, e saber qual se aplica ao seu caso economiza tempo e custos.</p>
+<nav class="toc" aria-label="Nesta página"><b>Nesta página</b><ol><li><a href="#por-que-o-divorcio-feito-no-exterior-nao-vale-au">Por que o divórcio feito no exterior não vale automaticamente no Brasil</a></li><li><a href="#quando-basta-o-cartorio-averbacao-direta-do-divo">Quando basta o cartório: averbação direta do divórcio consensual</a></li><li><a href="#quando-e-preciso-homologar-no-stj">Quando é preciso homologar no STJ</a></li><li><a href="#requisitos-para-a-homologacao">Requisitos para a homologação</a></li><li><a href="#passo-a-passo-da-homologacao-no-stj">Passo a passo da homologação no STJ</a></li><li><a href="#documentos-necessarios">Documentos necessários</a></li><li><a href="#quanto-tempo-leva-e-quanto-custa">Quanto tempo leva e quanto custa</a></li><li><a href="#guarda-e-pensao-decididas-no-exterior">Guarda e pensão decididas no exterior</a></li><li><a href="#e-o-caminho-inverso-divorcio-brasileiro-no-exter">E o caminho inverso: divórcio brasileiro no exterior</a></li><li><a href="#perguntas-frequentes">Perguntas frequentes</a></li></ol></nav>
 
-<p class="lead">Um imóvel no Brasil e uma conta na Europa. Pais que moravam em São Paulo e filhos em Lisboa, Madri ou Bruxelas. Quando uma família vive entre países, o inventário deixa de ser um procedimento único e passa a envolver <strong>mais de um sistema jurídico</strong>. Esta página explica as regras que mais pesam nesses casos e como os herdeiros podem participar à distância.</p>
-<nav class="toc" aria-label="Nesta página"><b>Nesta página</b><ol><li><a href="#a-regra-principal-cada-pais-cuida-dos-bens-do-se">A regra principal: cada país cuida dos bens do seu território</a></li><li><a href="#qual-lei-se-aplica-a-heranca">Qual lei se aplica à herança</a></li><li><a href="#situacoes-mais-comuns">Situações mais comuns</a></li><li><a href="#inventario-em-cartorio-com-herdeiro-no-exterior">Inventário em cartório com herdeiro no exterior</a></li><li><a href="#prazos-e-impostos">Prazos e impostos</a></li><li><a href="#documentos-que-costumam-ser-necessarios">Documentos que costumam ser necessários</a></li><li><a href="#planejamento-o-que-fazer-antes">Planejamento: o que fazer antes</a></li><li><a href="#perguntas-frequentes">Perguntas frequentes</a></li></ol></nav>
+<h2 id="por-que-o-divorcio-feito-no-exterior-nao-vale-au">Por que o divórcio feito no exterior não vale automaticamente no Brasil</h2>
+<p>Cada país exerce sua jurisdição dentro do próprio território. Para que uma decisão proferida por um juiz ou autoridade estrangeira produza efeitos no Brasil, ela passa por um controle formal, previsto na Constituição (art. 105, I, “i”), no Código de Processo Civil (arts. 960 a 965) e no Regimento Interno do STJ. Esse controle não reexamina quem tinha razão: verifica apenas se a decisão cumpre requisitos básicos.</p>
+<p>Enquanto o reconhecimento não acontece, para o Brasil você continua casado. Isso pode impedir um novo casamento, travar a venda de um imóvel, complicar a partilha e gerar problemas numa futura sucessão.</p>
 
-<h2 id="a-regra-principal-cada-pais-cuida-dos-bens-do-se">A regra principal: cada país cuida dos bens do seu território</h2>
-<p>No Brasil, apenas a autoridade brasileira pode fazer o inventário e a partilha de <strong>bens situados no Brasil</strong>, mesmo que o falecido fosse estrangeiro ou morasse fora (Código de Processo Civil, art. 23, II). O contrário também vale: o inventário brasileiro, em regra, <strong>não alcança bens situados no exterior</strong>, que seguem o procedimento do país onde estão.</p>
-<p>Na prática, famílias com patrimônio em mais de um país costumam precisar de <strong>um procedimento em cada país</strong>, coordenados entre si. Bem conduzidos, eles andam em paralelo e evitam decisões contraditórias.</p>
+<h2 id="quando-basta-o-cartorio-averbacao-direta-do-divo">Quando basta o cartório: averbação direta do divórcio consensual</h2>
+<p>O Código de Processo Civil (art. 961, § 5º) dispensa a homologação do STJ para a <strong>sentença estrangeira de divórcio consensual</strong>. A regra foi regulamentada pelo Conselho Nacional de Justiça (Provimento 53/2016, hoje incorporado ao Código Nacional de Normas do foro extrajudicial) e vale para o chamado <strong>divórcio consensual simples ou puro</strong>: aquele que apenas dissolve o casamento, podendo tratar do retorno ao nome de solteiro.</p>
+<p>Nesses casos, a decisão estrangeira, apostilada e traduzida, é levada diretamente ao Registro Civil onde o casamento está registrado no Brasil, que faz a averbação. Não é obrigatório advogado para esse pedido, embora a orientação ajude a evitar exigências e idas e vindas.</p>
+<div class="box"><p><strong>Atenção:</strong> se a decisão estrangeira também tratar de guarda de filhos, pensão alimentícia ou partilha de bens, ela deixa de ser “simples”. Nesse caso, o caminho é a homologação no STJ.</p></div>
 
-<h2 id="qual-lei-se-aplica-a-heranca">Qual lei se aplica à herança</h2>
-<p>Onde fazer o inventário e qual lei aplicar são perguntas diferentes. No Brasil, a Lei de Introdução às Normas do Direito Brasileiro (art. 10) determina que a sucessão segue a <strong>lei do país em que o falecido era domiciliado</strong>. Assim, o inventário de um imóvel no Brasil de alguém que morava em Portugal pode ter de aplicar regras do direito português.</p>
-<p>Há uma proteção importante: quando há bens de estrangeiro no Brasil, aplica-se a lei brasileira em benefício do cônjuge ou dos filhos brasileiros, sempre que a lei pessoal do falecido não lhes for mais favorável (Constituição, art. 5º, XXXI, e LINDB, art. 10, § 1º).</p>
-<h3>Se o falecido morava na União Europeia</h3>
-<p>Na maior parte dos países da União Europeia vale o Regulamento (UE) 650/2012, que determina como regra a lei do país de <strong>residência habitual</strong> do falecido no momento da morte. A pessoa pode escolher, em testamento, a lei da sua nacionalidade. O regulamento também criou o Certificado Sucessório Europeu, que facilita provar a condição de herdeiro nos países que o aplicam (Dinamarca e Irlanda não participam).</p>
-
-<h2 id="situacoes-mais-comuns">Situações mais comuns</h2>
-<h3>“Moro na Europa e tenho bens no Brasil”</h3>
-<p>Se você mora na Europa e é dono de bens no Brasil, o inventário desses bens, no futuro, será feito no Brasil. A lei aplicável à sucessão, porém, pode ser a do país europeu onde você vive. Por isso, é aqui que o <strong>planejamento</strong> faz mais diferença: testamento, escolha da lei aplicável e organização dos documentos evitam surpresas para a família.</p>
-<h3>“Meus pais moravam no Brasil e eu moro no exterior”</h3>
-<p>É a situação mais frequente. O inventário é feito no Brasil, e o herdeiro que vive fora participa por procuração ou por videoconferência. Não é preciso viajar.</p>
-<h3>“O falecido morava na Europa e deixou bens no Brasil”</h3>
-<p>Haverá, em regra, um procedimento no país europeu para os bens de lá (em Portugal, por exemplo, a habilitação de herdeiros) e um inventário no Brasil para os bens brasileiros, aplicando a lei que as regras de conflito indicarem.</p>
-<h3>Contas, investimentos e previdência em vários países</h3>
-<p>Cada instituição segue as regras do seu país para liberar valores. Documentos como certidões de óbito, habilitação de herdeiros e escrituras precisarão circular entre os países, com apostila e, quando necessário, tradução.</p>
-
-<h2 id="inventario-em-cartorio-com-herdeiro-no-exterior">Inventário em cartório com herdeiro no exterior</h2>
-<p>O inventário pode ser feito em cartório, por escritura pública, quando todos os herdeiros estão de acordo e com a assistência de advogado. Desde a Resolução CNJ 571/2024, a via extrajudicial também passou a ser admitida:</p>
+<h2 id="quando-e-preciso-homologar-no-stj">Quando é preciso homologar no STJ</h2>
 <ul>
-<li>com <strong>herdeiros menores ou incapazes</strong>, desde que recebam sua parte ideal em cada bem e haja manifestação favorável do Ministério Público;</li>
-<li>quando há <strong>testamento</strong>, desde que haja autorização expressa do juízo na ação de abertura e cumprimento do testamento.</li>
-</ul>
-<p>O herdeiro que mora fora pode participar de duas formas: por <strong>procuração pública</strong> com poderes específicos, feita no consulado brasileiro ou em notário estrangeiro (com apostila e tradução, se for o caso), ou <strong>por videoconferência</strong>, pela plataforma e-Notariado, assinando a escritura eletronicamente.</p>
-<div class="box"><p><strong>Limite importante:</strong> a escritura de inventário feita no Brasil não pode partilhar bens situados no exterior. Para esses bens, é preciso seguir o procedimento do país onde estão.</p></div>
-
-<h2 id="prazos-e-impostos">Prazos e impostos</h2>
-<p>No Brasil, o inventário deve ser aberto em até <strong>dois meses</strong> a contar do falecimento (CPC, art. 611). O atraso pode gerar multa sobre o imposto, conforme a lei de cada estado.</p>
-<p>O imposto sobre heranças no Brasil é o ITCMD, estadual. As regras para heranças com elementos no exterior mudaram recentemente: a Reforma Tributária (Emenda Constitucional 132/2023) e a Lei Complementar 227/2026 passaram a definir o estado competente quando o falecido morava fora do Brasil, em regra o do domicílio do herdeiro. Como os estados ainda estão adaptando suas leis, esse ponto deve ser analisado caso a caso.</p>
-<p>No exterior, cada país tem seu próprio imposto sobre heranças, e pode haver tributação nos dois países. Em Portugal, por exemplo, heranças podem estar sujeitas a Imposto do Selo, com isenção para cônjuge, filhos e pais em muitos casos.</p>
-
-<h2 id="documentos-que-costumam-ser-necessarios">Documentos que costumam ser necessários</h2>
-<ul>
-<li>Certidão de óbito (e sua transcrição, se o óbito ocorreu no exterior);</li>
-<li>Documentos pessoais do falecido e dos herdeiros, certidão de casamento e pacto antenupcial;</li>
-<li>Certidão de inexistência (ou existência) de testamento;</li>
-<li>Documentos dos bens: matrículas de imóveis, extratos, documentos de veículos e participações societárias;</li>
-<li>Procurações dos herdeiros que vivem fora, quando não participarem por videoconferência;</li>
-<li>Documentos estrangeiros apostilados e, se não estiverem em português, com tradução juramentada.</li>
+<li><strong>Divórcio litigioso</strong>, decidido sem acordo entre o casal;</li>
+<li><strong>Divórcio consensual qualificado</strong>, que além de dissolver o casamento trata de guarda, convivência, alimentos ou partilha de bens;</li>
+<li><strong>Decisões sobre filhos</strong>, como guarda e alimentos, mesmo fora de um divórcio;</li>
+<li><strong>Decisões não judiciais</strong> que, pela lei brasileira, teriam natureza jurisdicional (CPC, art. 961, § 1º), como alguns divórcios administrativos feitos no exterior, conforme o caso.</li>
 </ul>
 
-<h2 id="planejamento-o-que-fazer-antes">Planejamento: o que fazer antes</h2>
-<p>Quem vive entre países pode poupar a família de muitos passos com medidas simples: um testamento que considere os dois sistemas jurídicos, a escolha da lei aplicável quando permitida (como no Regulamento europeu), a organização de documentos e a revisão do regime de bens. O planejamento sucessório internacional não é só para grandes patrimônios; é para qualquer família que não quer deixar dúvidas.</p>
+<h2 id="requisitos-para-a-homologacao">Requisitos para a homologação</h2>
+<p>O CPC (art. 963) exige que a decisão estrangeira:</p>
+<ol>
+<li>tenha sido proferida por autoridade competente;</li>
+<li>tenha sido precedida de citação regular, ainda que tenha havido revelia;</li>
+<li>seja eficaz no país em que foi proferida;</li>
+<li>não ofenda coisa julgada brasileira;</li>
+<li>esteja acompanhada de tradução oficial, salvo dispensa prevista em tratado;</li>
+<li>não contenha manifesta ofensa à ordem pública.</li>
+</ol>
+<p>Na prática, a maior parte das exigências do STJ se concentra em dois pontos: a prova de que a decisão é definitiva e a prova de que a outra parte foi citada ou concordou com o pedido.</p>
+
+<h2 id="passo-a-passo-da-homologacao-no-stj">Passo a passo da homologação no STJ</h2>
+<ol>
+<li><strong>Reunir os documentos</strong> no país em que a decisão foi proferida: cópia integral da decisão e prova de que ela se tornou definitiva.</li>
+<li><strong>Apostilar</strong> os documentos (Convenção da Apostila da Haia) ou, se o país não fizer parte dela, legalizá-los no consulado brasileiro.</li>
+<li><strong>Traduzir</strong> por tradutor público juramentado no Brasil, quando o documento não estiver em português.</li>
+<li><strong>Protocolar o pedido</strong> no STJ, por advogado, pelo sistema eletrônico.</li>
+<li><strong>Citar a outra parte</strong>. Se o ex-cônjuge concordar e assinar a procuração ou uma declaração de anuência, essa etapa é abreviada.</li>
+<li><strong>Parecer do Ministério Público Federal</strong> e decisão, em regra pela Presidência do STJ quando não há contestação.</li>
+<li><strong>Averbação no cartório</strong> brasileiro onde o casamento está registrado, com a decisão do STJ.</li>
+</ol>
+
+<h2 id="documentos-necessarios">Documentos necessários</h2>
+<div class="tbl-wrap"><table class="tbl">
+<tr><th>Documento</th><th>Observação</th></tr>
+<tr><td>Cópia integral da decisão estrangeira</td><td>Com prova de que é definitiva (trânsito em julgado ou equivalente no país)</td></tr>
+<tr><td>Apostila da Haia ou legalização consular</td><td>Emitida no país de origem do documento</td></tr>
+<tr><td>Tradução juramentada</td><td>Dispensada para documentos em português, como os de Portugal</td></tr>
+<tr><td>Certidão de casamento brasileira</td><td>Ou a transcrição do casamento feito no exterior</td></tr>
+<tr><td>Prova de citação ou concordância da outra parte</td><td>A anuência expressa costuma encurtar o processo</td></tr>
+<tr><td>Procuração para o advogado</td><td>Pode ser assinada no exterior</td></tr>
+</table></div>
+
+<h2 id="quanto-tempo-leva-e-quanto-custa">Quanto tempo leva e quanto custa</h2>
+<p>Não há um prazo fixo. O tempo depende principalmente de duas coisas: a documentação estar completa desde o início e a outra parte concordar com o pedido. Quando o ex-cônjuge está de acordo, não é preciso citá-lo em outro país, o que costuma encurtar bastante o caminho. Quando a citação precisa ser feita no exterior, o prazo se alonga.</p>
+<p>Os custos envolvem as custas do STJ, a tradução juramentada, a apostila e os honorários advocatícios. A averbação direta em cartório, quando cabível, costuma ser mais simples e barata.</p>
+
+<h2 id="guarda-e-pensao-decididas-no-exterior">Guarda e pensão decididas no exterior</h2>
+<p>Decisões estrangeiras sobre guarda e alimentos também precisam ser homologadas para serem executadas no Brasil. No caso da pensão alimentícia, o Brasil participa de tratados que facilitam a cobrança entre países, como a Convenção da Haia de 2007 sobre a cobrança internacional de alimentos. Em temas de guarda, qualquer decisão é analisada sempre com atenção ao interesse da criança.</p>
+
+<h2 id="e-o-caminho-inverso-divorcio-brasileiro-no-exter">E o caminho inverso: divórcio brasileiro no exterior</h2>
+<p>A mesma lógica vale em sentido contrário. Um divórcio feito no Brasil, inclusive em cartório, precisa ser reconhecido no outro país para produzir efeitos lá. Em Portugal, isso acontece pela ação de revisão e confirmação de sentença estrangeira, no Tribunal da Relação. Veja em <a href="/brasil-portugal/">divórcio e herança entre Brasil e Portugal</a>.</p>
 
 <h2 id="perguntas-frequentes">Perguntas frequentes</h2>
-<div class="faq-list"><details><summary>Preciso ir ao Brasil para fazer o inventário?</summary><p>Em regra, não. O herdeiro que mora fora pode participar por procuração pública, feita no consulado ou em notário estrangeiro, ou por videoconferência, pela plataforma e-Notariado, no inventário em cartório.</p></details><details><summary>O inventário no Brasil inclui a conta ou o imóvel que estão no exterior?</summary><p>Em regra, não. O inventário brasileiro trata dos bens situados no Brasil. Bens no exterior seguem o procedimento do país onde estão, o que costuma exigir um procedimento em cada país.</p></details><details><summary>Moro na Europa. Qual lei vale para os meus bens no Brasil?</summary><p>O inventário dos bens no Brasil será feito no Brasil, mas a lei aplicável à sucessão, pela regra brasileira, é a do domicílio do falecido, que pode ser a lei do país europeu onde você mora. Há regras de proteção para cônjuge e filhos brasileiros.</p></details><details><summary>Existe prazo para abrir o inventário?</summary><p>No Brasil, o inventário deve ser aberto em até dois meses após o falecimento (CPC, art. 611). O atraso pode gerar multa sobre o ITCMD, conforme a lei de cada estado.</p></details><details><summary>Dá para fazer inventário em cartório se houver herdeiro menor?</summary><p>Desde a Resolução CNJ 571/2024, sim, desde que o menor receba sua parte ideal em cada bem e haja manifestação favorável do Ministério Público. Os demais requisitos da via extrajudicial também precisam ser cumpridos.</p></details><details><summary>Um testamento feito no exterior vale no Brasil?</summary><p>Pode valer, desde que tenha observado as formalidades do país onde foi feito. Para produzir efeitos no Brasil, ele passa por uma ação de abertura e cumprimento de testamento.</p></details><details><summary>Quem paga o imposto sobre a herança quando o falecido morava fora?</summary><p>As regras do ITCMD para esses casos foram alteradas pela Reforma Tributária e pela Lei Complementar 227/2026, que em regra atribuem a cobrança ao estado de domicílio do herdeiro. Como a aplicação ainda varia entre os estados, é preciso analisar o caso.</p></details></div>
+<div class="faq-list"><details><summary>Meu divórcio no exterior foi consensual. Preciso ir ao STJ?</summary><p>Se o divórcio foi consensual e apenas dissolveu o casamento (podendo tratar do nome), em regra não: ele pode ser averbado diretamente no cartório brasileiro (CPC, art. 961, § 5º). Se também tratou de filhos, pensão ou bens, é preciso homologar no STJ.</p></details><details><summary>Preciso estar no Brasil para homologar meu divórcio?</summary><p>Não. O pedido no STJ é eletrônico e feito por advogado, com procuração que pode ser assinada no exterior. A averbação no cartório também pode ser feita por representante.</p></details><details><summary>Não sei onde está meu ex-cônjuge. É possível homologar mesmo assim?</summary><p>Sim, é possível. Quando a outra parte não é localizada, a lei prevê formas de citação para esses casos, como a citação por edital. O processo tende a ser mais longo.</p></details><details><summary>O que acontece se eu não homologar meu divórcio estrangeiro?</summary><p>Para o Brasil, você continua casado. Isso pode impedir um novo casamento, complicar a venda de imóveis e a partilha de bens e gerar problemas em uma futura sucessão.</p></details><details><summary>A tradução precisa ser juramentada?</summary><p>Em regra, sim: o STJ exige tradução oficial, feita por tradutor público juramentado no Brasil, salvo dispensa em tratado. Documentos em português, como os emitidos em Portugal, não precisam de tradução.</p></details><details><summary>O que é apostila da Haia?</summary><p>É um certificado que confirma a autenticidade de um documento público para uso em outro país que faça parte da Convenção da Apostila, da qual o Brasil participa desde 2016. É emitida no país de origem do documento.</p></details><details><summary>Um divórcio feito em cartório ou órgão administrativo no exterior pode ser reconhecido?</summary><p>Em muitos casos, sim. O CPC admite a homologação de decisão não judicial que, pela lei brasileira, teria natureza jurisdicional. E o divórcio consensual simples pode ser averbado diretamente. A análise depende do documento emitido no país.</p></details></div>
 <div class="cta">
-  <h3>Vamos organizar o inventário da sua família?</h3>
-  <p>Analiso onde estão os bens, onde vivem os herdeiros e qual lei se aplica, para indicar o caminho mais simples em cada país. Atendimento online.</p>
+  <h3>Precisa validar no Brasil uma decisão estrangeira?</h3>
+  <p>Posso avaliar seus documentos e indicar se o seu caso vai ao STJ ou se basta a averbação no cartório. Atendimento online, onde quer que você esteja.</p>
   <div class="btns"><a class="btn btn-light" href="#" data-wa data-track="whatsapp">Conversar pelo WhatsApp</a><a class="btn btn-line" href="/#contato" data-track="cta-contato">Enviar mensagem</a></div>
 </div>
 <div class="author">
   <picture><source srcset="/aline-retrato.webp" type="image/webp"><img src="/aline-retrato.jpg" alt="Aline Vidanes" width="84" height="84" loading="lazy"></picture>
   <div><b>Aline Vidanes</b><p>Advogada inscrita na OAB/SP (396.351) e na Ordem dos Advogados de Portugal (61988P). Atua em Direito de Família e Sucessões, com foco em famílias que vivem ou têm bens em mais de um país. Atendimento online.</p><p><a href="/#sobre">Conheça a trajetória</a></p></div>
 </div>
-<section class="related"><h2>Leia também</h2><div class="related-grid"><a href="/divorcio-no-exterior/"><small>Divórcio</small>Divórcio no exterior: como fazer morando fora</a><a href="/brasil-portugal/"><small>Brasil e Portugal</small>Divórcio e herança entre Brasil e Portugal</a><a href="/artigo-divorcio-e-inventario-em-cartorio.html"><small>Artigo</small>Divórcio e inventário em cartório: quando é possível</a></div></section>
+<section class="related"><h2>Leia também</h2><div class="related-grid"><a href="/divorcio-no-exterior/"><small>Divórcio</small>Divórcio no exterior: como fazer morando fora</a><a href="/brasil-portugal/"><small>Brasil e Portugal</small>Divórcio e herança entre Brasil e Portugal</a><a href="/inventario-com-bens-no-exterior/"><small>Sucessões</small>Inventário com bens no exterior</a></div></section>
 <p class="disclaimer" style="margin-top:32px">Conteúdo de caráter exclusivamente informativo, elaborado com base nas normas vigentes em setembro de 2026. Não substitui a análise individual do caso. Regras de cartórios, consulados e tribunais podem variar e mudar.</p>
 </main>
 <footer><div class="wrap legal" style="padding-top:32px">
