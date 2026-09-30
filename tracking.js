@@ -89,7 +89,7 @@
     if (!read()) banner(false);
     var legal = document.querySelector('footer .legal') || document.querySelector('footer');
     if (legal && T) {
-      var a = document.createElement('a'); a.href = '#'; a.textContent = T.prefs;
+      var a = document.createElement('a'); a.href = '#preferencias-de-cookies'; a.setAttribute('role', 'button'); a.textContent = T.prefs;
       a.addEventListener('click', function (e) { e.preventDefault(); banner(true); });
       legal.appendChild(a);
     }
