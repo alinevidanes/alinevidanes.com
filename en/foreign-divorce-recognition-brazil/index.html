@@ -18,9 +18,7 @@
 <meta property="og:image" content="https://alinevidanes.com/og.jpg">
 <meta name="theme-color" content="#14233A">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <link rel="stylesheet" href="/site.css">
 <script type="application/ld+json">
 {
@@ -146,7 +144,6 @@
   </div>
 </header>
 <main id="conteudo" class="article">
-<p class="sent-ok" id="sent-ok" hidden>Thank you. Your message was sent and I will reply by email.</p>
 <nav class="crumbs"><a href="/">Home</a> › Foreign divorce recognition in Brazil</nav>
 <p class="eyebrow" style="margin-top:28px">For international families</p>
 <h1>Recognizing a foreign divorce in Brazil: what you need to know</h1>
@@ -216,18 +213,18 @@
 <div class="cta" id="contact">
   <h3>Tell me about your case</h3>
   <p>Write in English, Spanish or Portuguese. I reply by email.</p>
-  <form class="intl-form" method="POST" action="https://formsubmit.co/aline@alinevidanes.com">
-    <input type="hidden" name="_subject" value="New contact (EN) alinevidanes.com">
-    <input type="hidden" name="_next" value="https://alinevidanes.com/en/foreign-divorce-recognition-brazil/?sent=1">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+  <form class="intl-form" method="POST" action="https://api.web3forms.com/submit" data-w3f>
+      <input type="hidden" name="access_key" value="25faf4db-9119-431e-aba3-1f1d947e77f1">
+      <input type="hidden" name="subject" value="New contact (EN) | alinevidanes.com">
+      <input type="hidden" name="from_name" value="alinevidanes.com">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
     <input type="hidden" name="idioma" value="en">
     <div class="row2"><div><label for="f-n">Name</label><input id="f-n" name="name" autocomplete="name" required></div><div><label for="f-e">Email</label><input id="f-e" name="email" type="email" autocomplete="email" required></div></div>
     <label for="f-c">Country where you live</label><input id="f-c" name="country" autocomplete="country-name">
     <label for="f-m">How can I help?</label><textarea id="f-m" name="message" required></textarea>
     <label class="consent"><input type="checkbox" name="consent" required><span>I have read the Privacy Policy (in Portuguese) and agree to the use of this data to reply to my message. <a href="/politica-de-privacidade.html" style="color:#fff">Privacy Policy</a></span></label>
-    <div class="btns"><button class="btn btn-light" type="submit">Send</button><a class="btn btn-line" href="#" data-wa>Chat on WhatsApp</a></div>
+    <div class="btns"><button class="btn btn-light" type="submit">Send</button>
+      <p class="form-status" role="status" aria-live="polite"></p><a class="btn btn-line" href="#" data-wa>Chat on WhatsApp</a></div>
   </form>
 </div>
 <div class="author">
@@ -245,8 +242,8 @@
   <span>Chat with me</span>
 </a>
 <script src="/site.js"></script>
+<script src="/forms.js"></script>
 <script>
 document.querySelectorAll('[data-wa]').forEach(function(a){a.href="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Hello Aline, I found your website and would like to schedule a consultation.");});
-if(location.search.indexOf('sent=1')>-1){var s=document.getElementById('sent-ok');s.hidden=false;}
 </script>
 </body></html>
