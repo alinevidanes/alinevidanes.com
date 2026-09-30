@@ -14,7 +14,7 @@
       st.className='form-status sending'; st.textContent=t.sending; btn.disabled=true;
       fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
         .then(function(r){return r.json().then(function(j){if(!r.ok||!j.success)throw new Error(j.message||r.status);});})
-        .then(function(){st.className='form-status ok'; st.textContent=t.ok; f.reset();})
+        .then(function(){st.className='form-status ok'; st.textContent=t.ok; f.reset(); (window.dataLayer=window.dataLayer||[]).push({event:'conversao',conversao:f.getAttribute('data-track')||'formulario'});})
         .catch(function(){
           st.className='form-status err'; st.textContent=t.err;
           var a=document.createElement('a'); a.href='mailto:aline@alinevidanes.com'; a.textContent='aline@alinevidanes.com';
