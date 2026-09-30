@@ -6,7 +6,7 @@
 <script>
 window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
-try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','update',{analytics_storage:'granted'});}}catch(e){}
+try{var c=localStorage.getItem('cookie-consent');if(c){var o=c==='granted'?{analytics:1,clarity:1}:c==='denied'?{}:JSON.parse(c),g=function(b){return b?'granted':'denied';};gtag('consent','update',{analytics_storage:g(o.analytics),ad_storage:g(o.marketing),ad_user_data:g(o.marketing),ad_personalization:g(o.marketing)});dataLayer.push({consent_analytics:g(o.analytics),consent_clarity:g(o.clarity),consent_marketing:g(o.marketing)});}}catch(e){}
 </script>
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-56L2RRPF');</script>
@@ -48,7 +48,7 @@ try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','updat
    "@type": "Service",
    "name": "Reconocimiento en Brasil de sentencias extranjeras de divorcio",
    "provider": {
-    "@id": "https://alinevidanes.com/#aline"
+    "@id": "https://alinevidanes.com/#escritorio"
    },
    "areaServed": "Worldwide",
    "availableLanguage": [
@@ -58,7 +58,70 @@ try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','updat
    ]
   },
   {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Inicio",
+     "item": "https://alinevidanes.com/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Reconocimiento de divorcio extranjero en Brasil",
+     "item": "https://alinevidanes.com/es/reconocimiento-divorcio-extranjero-brasil/"
+    }
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://alinevidanes.com/#aline",
+   "name": "Aline Vidanes",
+   "jobTitle": "Abogada",
+   "knowsLanguage": [
+    "pt",
+    "es",
+    "en"
+   ],
+   "url": "https://alinevidanes.com/",
+   "sameAs": [
+    "https://www.instagram.com/aline.vidanes/",
+    "https://www.linkedin.com/in/alinevidanes/"
+   ]
+  },
+  {
+   "@type": "LegalService",
+   "@id": "https://alinevidanes.com/#escritorio",
+   "name": "Aline Vidanes Advocacia",
+   "url": "https://alinevidanes.com/",
+   "founder": {
+    "@id": "https://alinevidanes.com/#aline"
+   },
+   "description": "Advocacia em direito de família e sucessões para famílias que vivem ou têm bens em mais de um país. Atendimento online.",
+   "availableLanguage": [
+    "pt",
+    "es",
+    "en"
+   ],
+   "sameAs": [
+    "https://www.instagram.com/aline.vidanes/",
+    "https://www.linkedin.com/in/alinevidanes/"
+   ],
+   "availableChannel": {
+    "@type": "ServiceChannel",
+    "name": "Atendimento online",
+    "serviceUrl": "https://alinevidanes.com/#contato",
+    "availableLanguage": [
+     "pt",
+     "es",
+     "en"
+    ]
+   }
+  },
+  {
    "@type": "FAQPage",
+   "@id": "https://alinevidanes.com/es/reconocimiento-divorcio-extranjero-brasil/#faq",
    "mainEntity": [
     {
      "@type": "Question",
@@ -108,34 +171,6 @@ try{if(localStorage.getItem('cookie-consent')==='granted'){gtag('consent','updat
       "text": "Sí. La atención puede hacerse en línea, en español, portugués o inglés."
      }
     }
-   ]
-  },
-  {
-   "@type": "BreadcrumbList",
-   "itemListElement": [
-    {
-     "@type": "ListItem",
-     "position": 1,
-     "name": "Inicio",
-     "item": "https://alinevidanes.com/"
-    },
-    {
-     "@type": "ListItem",
-     "position": 2,
-     "name": "Reconocimiento de divorcio extranjero en Brasil",
-     "item": "https://alinevidanes.com/es/reconocimiento-divorcio-extranjero-brasil/"
-    }
-   ]
-  },
-  {
-   "@type": "Person",
-   "@id": "https://alinevidanes.com/#aline",
-   "name": "Aline Vidanes",
-   "jobTitle": "Abogada",
-   "knowsLanguage": [
-    "pt",
-    "es",
-    "en"
    ]
   }
  ]
