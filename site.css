@@ -329,3 +329,6 @@ footer{background:var(--navy-3);color:#C9D2DD;font-size:14px}
 .form-light .form-status.err{color:#9B2C2C}
 .intl-form .form-status{color:#fff}
 .intl-form .form-status.err{color:#F5C6B8}
+
+/* monograma A·V */
+.brand{display:grid!important;grid-template-columns:auto auto;column-gap:14px;align-items:center;justify-content:start}.brand .mono{grid-row:1 / span 2;width:50px;height:auto;color:var(--navy)}.brand b,.brand small{grid-column:2}.foot .brand .mono{color:var(--ivory)}@media (max-width:760px){.brand .mono{width:40px}.brand{column-gap:10px}}
