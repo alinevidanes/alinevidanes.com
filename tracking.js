@@ -7,7 +7,7 @@
   var lang = (document.documentElement.lang || 'pt').slice(0, 2);
   var T = {
     pt: { title: 'Sua privacidade', msg: 'Usamos cookies de análise só com a sua autorização, para entender como o site é usado. Você pode aceitar, recusar ou escolher por categoria.', more: 'Política de Privacidade', yes: 'Aceitar', no: 'Recusar', custom: 'Personalizar', save: 'Salvar escolhas', prefs: 'Preferências de cookies',
-          nec: ['Necessários', 'Guardam a sua escolha sobre cookies. Não podem ser desativados.'], ga: ['Estatísticas (Google Analytics)', 'Páginas visitadas, tempo de navegação, país aproximado e cliques em botões de contato.'], cl: ['Comportamento (Microsoft Clarity)', 'Como a página é rolada e clicada, de forma anonimizada. Não funciona na autoavaliação de estresse.'], mk: ['Marketing', 'Medição de anúncios em redes sociais.'], on: 'Ativo sempre' },
+          nec: ['Necessários', 'Guardam a sua escolha sobre cookies. Não podem ser desativados.'], ga: ['Estatísticas (Google Analytics)', 'Páginas visitadas, tempo de navegação, país aproximado e cliques em botões de contato.'], cl: ['Comportamento (Microsoft Clarity)', 'Como a página é rolada e clicada, de forma anonimizada. Não funciona na autoavaliação de bem-estar.'], mk: ['Marketing', 'Medição de anúncios em redes sociais.'], on: 'Ativo sempre' },
     en: { title: 'Your privacy', msg: 'We use analytics cookies only with your permission, to understand how the site is used. You can accept, decline or choose by category.', more: 'Privacy Policy (in Portuguese)', yes: 'Accept', no: 'Decline', custom: 'Customize', save: 'Save choices', prefs: 'Cookie preferences',
           nec: ['Necessary', 'Store your cookie choice. They cannot be turned off.'], ga: ['Statistics (Google Analytics)', 'Pages visited, time on site, approximate country and clicks on contact buttons.'], cl: ['Behavior (Microsoft Clarity)', 'How the page is scrolled and clicked, anonymized.'], mk: ['Marketing', 'Ad measurement on social networks.'], on: 'Always on' },
     es: { title: 'Su privacidad', msg: 'Usamos cookies de análisis solo con su autorización, para entender cómo se usa el sitio. Puede aceptar, rechazar o elegir por categoría.', more: 'Política de Privacidad (en portugués)', yes: 'Aceptar', no: 'Rechazar', custom: 'Personalizar', save: 'Guardar elección', prefs: 'Preferencias de cookies',
@@ -102,7 +102,7 @@
     window.dataLayer.push({ event: 'conversao', conversao: el.getAttribute('data-track'), link_url: el.href || '' });
   }, true);
 
-  // Autoavaliação de estresse: a gravação do Clarity é interrompida ao interagir com o teste.
+  // Autoavaliação de bem-estar: a gravação do Clarity é interrompida ao interagir com o teste.
   document.addEventListener('pointerdown', function (e) {
     if (e.target.closest && e.target.closest('#autoavaliacao, #quiz') && typeof window.clarity === 'function') window.clarity('stop');
   }, true);
