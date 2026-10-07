@@ -2,7 +2,7 @@
 var WHATSAPP = "32471634305";
 var MSG = "Olá, Aline! Vim pelo seu site e gostaria de agendar um atendimento.";
 document.querySelectorAll('[data-wa]').forEach(function (a) {
-  a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MSG);
+  a.href = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(a.getAttribute("data-wa") || MSG);
   a.target = "_blank"; a.rel = "noopener";
 });
 var b = document.querySelector('.burger'), m = document.getElementById('menu');
