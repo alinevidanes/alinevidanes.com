@@ -4,8 +4,8 @@
   var KEY = 'cookie-consent';
   // Categoria Marketing ligada: medição do Google Ads (ad_storage e ad_user_data; personalização sempre negada).
   var MARKETING_TOOLS = true;
-  // Prazo para pedir o consentimento de novo, em dias. 0 = só quando as categorias mudam.
-  var RENEW_DAYS = 0;
+  // Prazo para pedir o consentimento de novo, em dias (6 meses, aprovado pela Aline em 07/10/2026).
+  var RENEW_DAYS = 182;
   var lang = (document.documentElement.lang || 'pt').slice(0, 2);
   var T = {
     pt: { title: 'Sua privacidade', msg: 'Usamos cookies de análise e de medição de anúncios só com a sua autorização, para entender como o site é usado e de onde vêm os contatos. Você pode aceitar, recusar ou escolher por categoria.', more: 'Política de Privacidade', yes: 'Aceitar', no: 'Recusar', custom: 'Personalizar', save: 'Salvar escolhas', prefs: 'Preferências de cookies',
@@ -90,7 +90,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     var saved = read();
-    if (!saved || !saved.v || (saved.x && Date.now() > saved.x)) banner(false);
+    if (!saved || !saved.v || (saved.x && Date.now() > saved.x) || (RENEW_DAYS && saved.t && Date.now() - saved.t > RENEW_DAYS * 864e5)) banner(false);
     var legal = document.querySelector('footer .legal') || document.querySelector('footer');
     if (legal && T) {
       var a = document.createElement('a'); a.href = '#preferencias-de-cookies'; a.setAttribute('role', 'button'); a.textContent = T.prefs;
