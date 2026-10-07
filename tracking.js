@@ -2,16 +2,18 @@
 // Nenhuma ferramenta de análise ou publicidade é ativada antes da escolha da pessoa.
 (function () {
   var KEY = 'cookie-consent';
-  // Mude para true somente se um Pixel ou outra ferramenta de marketing for instalada no Tag Manager.
-  var MARKETING_TOOLS = false;
+  // Categoria Marketing ligada: medição do Google Ads (ad_storage e ad_user_data; personalização sempre negada).
+  var MARKETING_TOOLS = true;
+  // Prazo para pedir o consentimento de novo, em dias. 0 = só quando as categorias mudam.
+  var RENEW_DAYS = 0;
   var lang = (document.documentElement.lang || 'pt').slice(0, 2);
   var T = {
-    pt: { title: 'Sua privacidade', msg: 'Usamos cookies de análise só com a sua autorização, para entender como o site é usado. Você pode aceitar, recusar ou escolher por categoria.', more: 'Política de Privacidade', yes: 'Aceitar', no: 'Recusar', custom: 'Personalizar', save: 'Salvar escolhas', prefs: 'Preferências de cookies',
-          nec: ['Necessários', 'Guardam a sua escolha sobre cookies. Não podem ser desativados.'], ga: ['Estatísticas (Google Analytics)', 'Páginas visitadas, tempo de navegação, país aproximado e cliques em botões de contato.'], cl: ['Comportamento (Microsoft Clarity)', 'Como a página é rolada e clicada, de forma anonimizada. Não funciona na autoavaliação de bem-estar.'], mk: ['Marketing', 'Medição de anúncios em redes sociais.'], on: 'Ativo sempre' },
-    en: { title: 'Your privacy', msg: 'We use analytics cookies only with your permission, to understand how the site is used. You can accept, decline or choose by category.', more: 'Privacy Policy (in Portuguese)', yes: 'Accept', no: 'Decline', custom: 'Customize', save: 'Save choices', prefs: 'Cookie preferences',
-          nec: ['Necessary', 'Store your cookie choice. They cannot be turned off.'], ga: ['Statistics (Google Analytics)', 'Pages visited, time on site, approximate country and clicks on contact buttons.'], cl: ['Behavior (Microsoft Clarity)', 'How the page is scrolled and clicked, anonymized.'], mk: ['Marketing', 'Ad measurement on social networks.'], on: 'Always on' },
-    es: { title: 'Su privacidad', msg: 'Usamos cookies de análisis solo con su autorización, para entender cómo se usa el sitio. Puede aceptar, rechazar o elegir por categoría.', more: 'Política de Privacidad (en portugués)', yes: 'Aceptar', no: 'Rechazar', custom: 'Personalizar', save: 'Guardar elección', prefs: 'Preferencias de cookies',
-          nec: ['Necesarias', 'Guardan su elección sobre cookies. No se pueden desactivar.'], ga: ['Estadísticas (Google Analytics)', 'Páginas visitadas, tiempo de navegación, país aproximado y clics en botones de contacto.'], cl: ['Comportamiento (Microsoft Clarity)', 'Cómo se desplaza y se hace clic en la página, de forma anonimizada.'], mk: ['Marketing', 'Medición de anuncios en redes sociales.'], on: 'Siempre activas' }
+    pt: { title: 'Sua privacidade', msg: 'Usamos cookies de análise e de medição de anúncios só com a sua autorização, para entender como o site é usado e de onde vêm os contatos. Você pode aceitar, recusar ou escolher por categoria.', more: 'Política de Privacidade', yes: 'Aceitar', no: 'Recusar', custom: 'Personalizar', save: 'Salvar escolhas', prefs: 'Preferências de cookies',
+          nec: ['Necessários', 'Guardam a sua escolha sobre cookies. Não podem ser desativados.'], ga: ['Estatísticas (Google Analytics)', 'Páginas visitadas, tempo de navegação, país aproximado e cliques em botões de contato.'], cl: ['Comportamento (Microsoft Clarity)', 'Como a página é rolada e clicada, de forma anonimizada. Não funciona na autoavaliação de bem-estar.'], mk: ['Marketing', 'Medição do Google Ads: de qual anúncio veio a visita e se ela virou um contato.'], on: 'Ativo sempre' },
+    en: { title: 'Your privacy', msg: 'We use analytics and ad measurement cookies only with your permission, to understand how the site is used and where contacts come from. You can accept, decline or choose by category.', more: 'Privacy Policy (in Portuguese)', yes: 'Accept', no: 'Decline', custom: 'Customize', save: 'Save choices', prefs: 'Cookie preferences',
+          nec: ['Necessary', 'Store your cookie choice. They cannot be turned off.'], ga: ['Statistics (Google Analytics)', 'Pages visited, time on site, approximate country and clicks on contact buttons.'], cl: ['Behavior (Microsoft Clarity)', 'How the page is scrolled and clicked, anonymized.'], mk: ['Marketing', 'Google Ads measurement: which ad brought the visit and whether it became a contact.'], on: 'Always on' },
+    es: { title: 'Su privacidad', msg: 'Usamos cookies de análisis y de medición de anuncios solo con su autorización, para entender cómo se usa el sitio y de dónde vienen los contactos. Puede aceptar, rechazar o elegir por categoría.', more: 'Política de Privacidad (en portugués)', yes: 'Aceptar', no: 'Rechazar', custom: 'Personalizar', save: 'Guardar elección', prefs: 'Preferencias de cookies',
+          nec: ['Necesarias', 'Guardan su elección sobre cookies. No se pueden desactivar.'], ga: ['Estadísticas (Google Analytics)', 'Páginas visitadas, tiempo de navegación, país aproximado y clics en botones de contacto.'], cl: ['Comportamiento (Microsoft Clarity)', 'Cómo se desplaza y se hace clic en la página, de forma anonimizada.'], mk: ['Marketing', 'Medición de Google Ads: qué anuncio trajo la visita y si se convirtió en un contacto.'], on: 'Siempre activas' }
   }[lang];
   if (!T) T = null;
   window.dataLayer = window.dataLayer || [];
@@ -30,8 +32,9 @@
 
   function apply(c, changed) {
     var before = read();
+    c.v = 2; c.t = Date.now(); if (RENEW_DAYS) c.x = c.t + RENEW_DAYS * 864e5;
     try { localStorage.setItem(KEY, JSON.stringify(c)); } catch (e) {}
-    gtag('consent', 'update', { analytics_storage: g(c.analytics), ad_storage: g(c.marketing), ad_user_data: g(c.marketing), ad_personalization: g(c.marketing) });
+    gtag('consent', 'update', { analytics_storage: g(c.analytics), ad_storage: g(c.marketing), ad_user_data: g(c.marketing), ad_personalization: 'denied' });
     window.dataLayer.push({ event: 'consent_update', consent_analytics: g(c.analytics), consent_clarity: g(c.clarity), consent_marketing: g(c.marketing) });
     close();
     // Se a pessoa retirar uma autorização dada antes, apagamos os cookies e recarregamos a página
@@ -39,7 +42,7 @@
     if (before && ((before.analytics && !c.analytics) || (before.clarity && !c.clarity) || (before.marketing && !c.marketing))) {
       document.cookie.split(';').forEach(function (k) {
         var n = k.split('=')[0].trim();
-        if (/^(_ga|_gid|_gat|_clck|_clsk|_fbp|_fbc)/.test(n)) {
+        if (/^(_ga|_gid|_gat|_clck|_clsk|_fbp|_fbc|_gcl)/.test(n)) {
           var h = location.hostname.replace(/^www\./, '');
           ['', '; domain=' + h, '; domain=.' + h].forEach(function (d) { document.cookie = n + '=; Max-Age=0; path=/' + d; });
         }
@@ -86,7 +89,8 @@
   window.openCookiePrefs = function () { banner(true); };
 
   document.addEventListener('DOMContentLoaded', function () {
-    if (!read()) banner(false);
+    var saved = read();
+    if (!saved || !saved.v || (saved.x && Date.now() > saved.x)) banner(false);
     var legal = document.querySelector('footer .legal') || document.querySelector('footer');
     if (legal && T) {
       var a = document.createElement('a'); a.href = '#preferencias-de-cookies'; a.setAttribute('role', 'button'); a.textContent = T.prefs;
